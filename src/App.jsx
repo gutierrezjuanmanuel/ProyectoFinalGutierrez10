@@ -1,15 +1,17 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Cart from './components/Cart/Cart';
-import Checkout from './components/Checkout/Checkout';
+import React from 'react';
+import Contador from './componentes/Contador/Contador';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import NavBar from './componentes/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CarritoProvider } from './context/CarritoContext';
+import { CarritoProvider} from './context/CarritoContext';
+import Cart from './componentes/Cart/Cart';
+import Checkout from './componentes/Checkout/Checkout';
 
-function App() {
+const App = () => {
   return (
     <>
+
       <BrowserRouter>
         <CarritoProvider>
           <NavBar />
@@ -19,12 +21,13 @@ function App() {
             <Route path='/item/:idItem' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart/>} />
             <Route path='/checkout' element={<Checkout/>} />
+            <Route path='*' element={<h2>Sitio En Construcción </h2>} />
           </Routes>
         </CarritoProvider>
       </BrowserRouter>
 
     </>
-  );
+  )
 }
 
-export default App;
+export default App
