@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
-
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "marolio-6f689.firebaseapp.com",
-  projectId: "marolio-6f689",
-  storageBucket: "marolio-6f689.appspot.com",
-  messagingSenderId: "69425841174",
-  appId: "1:69425841174:web:195efb35342b3ac0bae137"
+  apiKey: "AIzaSyDfc3NLxQ1-JihCknivrmLGaeVUPwr-csc",
+  authDomain: "casademusica-9bdd4.firebaseapp.com",
+  projectId: "casademusica-9bdd4",
+  storageBucket: "casademusica-9bdd4.appspot.com",
+  messagingSenderId: "571483152256",
+  appId: "1:571483152256:web:bc4e3a7d1478b0a9cb6b65"
 };
 
 // Initialize Firebase
